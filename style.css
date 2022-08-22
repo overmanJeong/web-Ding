@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  box-sizing: border-box;
+}
+
+.fade-in {
+  animation: fadein 0.7s;
+}
+
+@keyframes fadein {
+  from {opacity:0}
+    to {opacity:1}
+}
+
+.fade-out {
+  animation: fadeout 0.7s;
+}
+
+@keyframes fadeout {
+  from {opacity:1}
+    to {opacity:0}
+}
+
+input,
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/*login todo form*/
+input::placeholder {
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  width: 500px;
+  height: 100vh; /* center */
+  margin: 0 auto; /* 중앙정렬 */
+  display: flex; /* 중앙정렬 */
+  flex-direction: column; /* 위 => 아래 */ 
+  align-items: center; /* 수직 중앙 배치 */
+  justify-content: center; /* 수평 중앙 배치 */
+}
+
+
+#background {
+  position: fixed; /* 스크롤 구속 X */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* 우선 위치 설정 */
+  opacity: 80%;
+  filter: brightness(50%);
+}
+
+
+#clock {
+  font-size: 10rem;
+  text-shadow: 0 5px 25px rgb(0, 0, 0);
+}
+
+
+#login-form {
+  display: grid;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 0 20px 5px 20px;
+  text-shadow: 0 2px 100px rgb(0, 0, 0);
+}
+
+#login-form input[type="text"] {
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+  text-shadow: 0 2px 100px rgb(0, 0, 0);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color:white;
+  border-bottom: 2px solid white;
+}
+
+#loginButton {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  box-shadow: 0 1px 10px rgb(0, 0, 0);
+}
+
+#loginForm #loginButton:active {
+  transform: scale(0.98);
+}
+
+
+#greeting {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  text-shadow: 0 2px 20px rgb(0, 0, 0);
+}
+
+#todo-form #todoInput {
+    color: white;
+    background-color: transparent;
+    width: 250px;
+    font-size: 15px;
+    text-align: center;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color:white;
+    border-bottom: 2px solid white;
+    outline: none;
+}
+
+#todo-list {
+  width: 30vh;
+  justify-self: center;
+  color: white;
+  user-select: none;
+  text-shadow: 0 2px 5px rgb(0, 0, 0);
+}
+
+#todo-list li {
+  position: relative; /* 자신 기준 배치 */
+  display: flex;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+#todo-list li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+#todo-list li span {
+  flex: 1;
+  margin-right: 10px;
+  white-space: nowrap; /* 줄바꿈 */
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+
+
+#quote {
+  display: grid;
+  /* position: absolute; */
+  font-size: 25px;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  width: 700px;
+  bottom: 5px;
+  right: 10px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 10px rgb(0, 0, 0);
+}
+
+#quote span:first-child {
+}
+
+#quote span:last-child {
+}
+
+
+#weather {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#weather > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#weather img {
+  width: 60px;
+  height: 60px;
+}
+
+#todo-list ul button:active {
+  transform: scale(0.95);
+}
+
+#todo-list ul button {
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: red;
+  margin-right: 10px;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}

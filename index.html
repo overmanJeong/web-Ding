@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Welcome D!ng</title>
+</head>
+
+<body>
+	<div class="container">
+
+		<h2 id="clock">00:00</h2>
+
+		<form id="login-form" class="hidden">
+			<input id="loginInput"			type="text" placeholder="What's your name?"
+			required maxlength="15" />
+
+			<!-- login btn -->
+			<input id="loginButton"
+				type="submit"
+				value="D!ng" />
+		</form>
+
+		<h1 id="greeting" class="hidden"></h1>
+
+		<form id="todo-form">
+			<!-- todoInput, class =hidden -->
+			<input id="todoInput"
+			class="hidden"
+			type="text"
+			placeholder="Enter Korea food here!">
+		</form>
+		
+		<ul id="todo-list"></ul>
+
+		<div id="quote">
+			<span></span>
+			<span></span>
+		</div>
+
+		<div id="weather">
+			<div>
+				<span class="weather-temp"></span>
+				<span class="weather-city"></span>
+			</div>
+		</div>
+	</div>
+
+	<script src="greetings.js"></script>
+	<script src="clock.js"></script>
+	<script src="quotes.js"></script>
+	<script src="background.js"></script>
+	<script src="todo.js"></script>
+	<script src="weather.js"></script>
+</body>
+
+</html>
